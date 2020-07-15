@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Documents</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <ul class="tab-group">
+    <li class="tab active"> <a href="/">Home</a> </li>
+    <li class="tab active"><a href="/register">Sign Up</a></li>
+    <li class="tab"><a href="/login">Log In</a></li>
+    <li class="tab"><a href="/article">Invite</a></li>
+    <li class="tab"><a href="/acceptedinvitations">Accepted Invitations</a></li>
+    <li class="tab"><a href="/createdinvitations">My invitations</a></li>
+</ul>
+
+
+
+
+
+          
+  <form action="/feed" method="post">
+
+    <% var i=0; newListItem.article.forEach(function(cell){  %>
+      <div class="invitations">
+
+        <div class="item">
+          <br>
+          <p class="title"> <%= cell.email %> </p>
+           <button type="submit" class="signup-b" name="view" value=<%= i %>>View Invitation</button>
+        
+         </div>
+           
+         <div class="accept">
+           <button type="submit" class="signup-b" name="accept" value=<%= i %>>Accept</button>
+         </div>
+  
+         <div class="reject">
+          <button type="submit" class="signup-b" name="reject" value=<%= i %>>Reject</button>
+          </div>
+  
+      </div> 
+    
+  
+      
+    <% i++;  }) %>
+
+  </form>
+
+ 
+        
+
+
+  <%- include('partials/footer') %>

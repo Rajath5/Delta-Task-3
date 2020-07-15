@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<style>
+  body { background-color: #487eb0;}
+</style>
+
+<div class="signup-form">
+  <form class="deets" action="/article" method="post">
+
+
+
+
+    <input type="text" name="title" value="" placeholder="Title of the invitation" class="txtbtn">
+
+    <input type="text" name="content" value="" placeholder="Brief Description" class="txtbtn">
+
+    <input type="text" name="timing" value="" placeholder="Timing" class="txtbtn">
+  
+    <input type="email" name="email" placeholder="Who do you want to invite?" class="txtbtn">
+    <button type="submit" name="button" class="signup-b">Create invitation</button>
+ 
+  </form>
+
+    
+<a href="/logout">Logout</a>
+</div>
+
+
+
+
+
+<%- include('partials/footer') %>

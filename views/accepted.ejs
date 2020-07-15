@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<form action="/acceptedinvitations" method="post">
+
+<% var i=0; newListItem.accepted.forEach(function(cell){  %>
+    <div class="invitations">
+         
+     
+
+        <div class="item">
+          <br>
+          <p class="title"> <%= cell.email %> </p>
+           <button type="submit" name="view" class="signup-b" value= <%= i %> >View Invitation</button>
+           <hr>
+         </div>
+
+    </div> 
+  
+    <% i++; }) %>
+
+</form>
+
+<%- include('partials/footer') %>
